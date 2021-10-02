@@ -18,11 +18,11 @@ enterocpy4: .space 4
 enterocpy5: .space 4
 
             .text
-main:       lw $s0 entero1
-            lw $s1 entero2
-            lw $s2 entero3
-            lw $s3 entero4
-            lw $s4 entero5
+main:       lw $s0 entero1($0)
+            lw $s1 entero2($0)
+            lw $s2 entero3($0)
+            lw $s3 entero4($0)
+            lw $s4 entero5($0)
 
             sw $s0 enterocpy1($0)
             sw $s1 enterocpy2($0)
