@@ -7,9 +7,9 @@ numero3: .word 2
          .text
 main:    lw    $t0, numero1($0)
          lw    $t1, numero2($0)
-         sub  $t0, $t0, $t1       # $t0 <- $t0 - $t1
+         sub   $t0, $t0, $t1       # $t0 <- $t0 - $t1 OverFlow
          lw    $t1, numero3($0)
-         sub  $t0, $t0, $t1       # $t0 <- $t0 - $t1
+         sub   $t0, $t0, $t1       # $t0 <- $t0 - $t1
          sw	   $t0, numero3($0) 
 
 # comienza el progrma
@@ -22,11 +22,8 @@ main:    lw    $t0, numero1($0)
 # cargo el contenido en la posicion de memoria: numero2 - en -> $t1
 
 # hago la resta sin signo: $t0 <- $t0 - $t1
-#                     7fffffff <- 80000000 - 1  
+#                          Arithmetic Overflow
 
-# cargo el contenido en la posicion de memoria: numero3 - en -> $t1
-
-# hago la resta con signo: $t0 <- $t0 - $t1
-#                     7ffffffd <- 7fffffff - 2
-
-# almaceno el contenido del registro $t0 en la posicion de memoria de: numero3
+# Porque es como si hiciera: -0x80000000 - 0x1 -> -0x80000001 
+# Pero como el numero -0x80000000 es el max negativo en Ca2(32) representable
+# El MIPS devolvio overflow

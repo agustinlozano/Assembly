@@ -8,4 +8,4 @@ main:   lw    $t0, numero($0)
                                 # $t1 = 0x7fffffff
 
 # No realizo la suma correctamente porque la cifra a representar
-# estaba fuera del rango de los positivos representables
+# estaba fuera del rango de los enteros positivos con signo representables
