@@ -6,7 +6,7 @@ numero3:   .word 5
            .data 0x10010000
 resultado: .space 4
 
-.text
+           .text
 main:      lw $t0, numero1($0)
            lw $t1, numero2($0)
            lw $t2, numero3($0)
