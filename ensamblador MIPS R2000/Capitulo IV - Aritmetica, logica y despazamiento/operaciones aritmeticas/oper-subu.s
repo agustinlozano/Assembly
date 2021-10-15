@@ -7,9 +7,9 @@ numero3: .word 2
          .text
 main:    lw    $t0, numero1($0)
          lw    $t1, numero2($0)
-         sub  $t0, $t0, $t1       # $t0 <- $t0 - $t1
+         subu  $t0, $t0, $t1       # $t0 <- $t0 - $t1
          lw    $t1, numero3($0)
-         sub  $t0, $t0, $t1       # $t0 <- $t0 - $t1
+         subu  $t0, $t0, $t1       # $t0 <- $t0 - $t1
          sw	   $t0, numero3($0) 
 
 # comienza el progrma
