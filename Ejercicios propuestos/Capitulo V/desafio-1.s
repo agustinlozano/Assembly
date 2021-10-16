@@ -20,6 +20,4 @@ main:   lb  $t8, vector($0)
         or  $t0, $t8, $t9
         and $t0, $t0, $t1
         sb  $t0, res+2($0)
-
-
-        
+             
