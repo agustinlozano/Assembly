@@ -1,4 +1,4 @@
-.data
+        .data
 min1:   .word 2
 max1:   .word 10
 
@@ -10,7 +10,7 @@ res:    .space 4
 
 # if((34 >= 2 & 34 <= 10) | (34 >= min2 & 34 <= max2))
 
-.text
+        .text
 main:   lw   $t3, num($0)
         lw   $t4, min1($0)
         lw   $t5, max1($0)
