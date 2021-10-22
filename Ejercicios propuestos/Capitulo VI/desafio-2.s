@@ -18,7 +18,7 @@ while:      lw   $t1, vector($t0)     #inicio bucle
             
             beq  $t1, $0, contar
             addi $t0, 4
-            j	 while				  # jump to while
+            j	 while                # jump to while
             
 contar:     addi $t7, 1
             addi $t0, 4
